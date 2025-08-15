@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # GET req to READ all values pertaining to a Model governed table of Objects/Records/Rows
+  get "/restaurants", to: "restaurants#index"
+
+  # GET req to READ a single value pertaining to a Model governed table of Objects/Records/Rows
+  get "/restaurants/:id", to: "restaurants#show"
 end

@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # GET req to READ all values pertaining to a Model governed table of Objects/Records/Rows
   get "/restaurants", to: "restaurants#index"
 
+  get "/restaurants/new", to: "restaurants#new"
+  post "/restaurants/", to: "restaurants#create"
+
   # GET req to READ a single value pertaining to a Model governed table of Objects/Records/Rows
-  get "/restaurants/:id", to: "restaurants#show"
+  get "/restaurants/:id", to: "restaurants#show", as: :restaurant
 end
